@@ -2,7 +2,9 @@
 #include "ListFactory.h"
 
 using namespace std;
-
+/*
+ * Main function for testing the doubly linked list
+ */
 int main() {
     DoublyLinkedList* list = ListFactory::createList();
 

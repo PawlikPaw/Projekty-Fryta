@@ -2,7 +2,9 @@
 #define DOUBLYLINKEDLIST_H
 
 #include "Node.h"
-
+/*
+ * Class representing a doubly linked list
+ */
 class DoublyLinkedList {
 private:
     Node* head;

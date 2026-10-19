@@ -3,7 +3,9 @@
 #include <iostream>
 
 using namespace std;
-
+/*
+ * Constructor for DoublyLinkedList
+ */
 DoublyLinkedList::DoublyLinkedList() : head(nullptr), tail(nullptr) {}
 
 DoublyLinkedList::~DoublyLinkedList() {

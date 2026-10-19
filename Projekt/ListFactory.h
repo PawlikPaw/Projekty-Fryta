@@ -3,7 +3,9 @@
 
 #include "DoublyLinkedList.h"
 #include "Node.h"
-
+/*
+ * Factory class for creating list and node objects
+*/
 class ListFactory {
 public:
     static DoublyLinkedList* createList();

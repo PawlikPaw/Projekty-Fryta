@@ -5,11 +5,17 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
-      "args": [],
+      "args": [
+    "-fdiagnostics-color=always",
+    "-g",
+    "${fileDirname}/*.cpp",
+    "-o",
+    "${fileDirname}/${fileBasenameNoExtension}"
+    ],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/admin/Projekty/Projekty-Fryta",
-      "program": "/home/admin/Projekty/Projekty-Fryta/build/Debug/outDebug",
+      "cwd": "/home/admin/Projekty/Projekty-Fryta/Projekt",
+      "program": "/home/admin/Projekty/Projekty-Fryta/Projekt/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

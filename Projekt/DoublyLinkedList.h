@@ -13,7 +13,7 @@ private:
 public:
     DoublyLinkedList();
     ~DoublyLinkedList();
-
+    
     void addFront(int val);
     void addBack(int val);
     void removeFront();
@@ -21,6 +21,7 @@ public:
     void displayForward() const;
     void displayBackward() const;
     void clear();
+    // Constructor for the DoublyLinkedList class
 };
 
 #endif

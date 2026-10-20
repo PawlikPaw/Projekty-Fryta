@@ -11,7 +11,9 @@ DoublyLinkedList::DoublyLinkedList() : head(nullptr), tail(nullptr) {}
 DoublyLinkedList::~DoublyLinkedList() {
     clear();
 }
-
+/*
+ * Adds a new node with the given value to the front of the list
+ */
 void DoublyLinkedList::addFront(int val) {
     Node* newNode = ListFactory::createNode(val);
     if (!head) {
@@ -22,7 +24,9 @@ void DoublyLinkedList::addFront(int val) {
         head = newNode;
     }
 }
-
+/*
+ * Adds a new node with the given value to the back of the list
+ */
 void DoublyLinkedList::addBack(int val) {
     Node* newNode = ListFactory::createNode(val);
     if (!tail) {
@@ -33,7 +37,9 @@ void DoublyLinkedList::addBack(int val) {
         tail = newNode;
     }
 }
-
+/*
+ * Removes the first node from the list
+ */
 void DoublyLinkedList::removeFront() {
     if (!head) return;
     Node* temp = head;
@@ -45,7 +51,9 @@ void DoublyLinkedList::removeFront() {
     }
     delete temp;
 }
-
+/*
+ * Removes the last node from the list
+ */
 void DoublyLinkedList::removeBack() {
     if (!tail) return;
     Node* temp = tail;
@@ -57,7 +65,9 @@ void DoublyLinkedList::removeBack() {
     }
     delete temp;
 }
-
+/*
+ * Displays the list from head to tail
+ */
 void DoublyLinkedList::displayForward() const {
     Node* curr = head;
     cout << "Lista (od poczatku): ";
@@ -67,7 +77,9 @@ void DoublyLinkedList::displayForward() const {
     }
     cout << endl;
 }
-
+/*
+ * Displays the list from tail to head
+ */
 void DoublyLinkedList::displayBackward() const {
     Node* curr = tail;
     cout << "Lista (od konca):    ";

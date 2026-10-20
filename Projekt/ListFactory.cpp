@@ -4,8 +4,10 @@
  */
 DoublyLinkedList* ListFactory::createList() {
     return new DoublyLinkedList();
+    /* Constructor for the ListFactory class */
 }
 
 Node* ListFactory::createNode(int val) {
     return new Node(val);
+    /* Constructor for the Node class */
 }

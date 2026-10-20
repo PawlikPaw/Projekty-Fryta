@@ -10,6 +10,7 @@ class ListFactory {
 public:
     static DoublyLinkedList* createList();
     static Node* createNode(int val);
+    /* Constructor for the ListFactory class */
 };
 
 #endif

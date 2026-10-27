@@ -1,0 +1,33 @@
+\doxysection{Doubly\+Linked\+List.\+h}
+\hypertarget{DoublyLinkedList_8h_source}{}\label{DoublyLinkedList_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOUBLYLINKEDLIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOUBLYLINKEDLIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Node.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{classNode}{Node}}*\ head;}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classNode}{Node}}*\ tail;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classDoublyLinkedList}{DoublyLinkedList}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classDoublyLinkedList}{\string~DoublyLinkedList}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ addFront(\textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ addBack(\textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ addAt(\textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ removeFront();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ removeBack();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ removeAt(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ displayForward()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ displayBackward()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ clear();}
+\DoxyCodeLine{00024\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classNode}{Node}}*\ getHead()\ \textcolor{keyword}{const};\ }
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

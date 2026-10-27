@@ -11,3 +11,7 @@ Node* ListFactory::createNode(int val) {
     return new Node(val);
     /* Constructor for the Node class */
 }
+
+ListIterator* ListFactory::createIterator(Node* startNode) {
+    return new ListIterator(startNode);
+}

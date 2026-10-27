@@ -16,12 +16,16 @@ public:
     
     void addFront(int val);
     void addBack(int val);
+    void addAt(int index, int val);
     void removeFront();
     void removeBack();
+    void removeAt(int index);
     void displayForward() const;
     void displayBackward() const;
     void clear();
     // Constructor for the DoublyLinkedList class
+    Node* getHead() const;
+    Node* getTail() const;
 };
 
 #endif

@@ -15,10 +15,10 @@ int main() {
     DoublyLinkedList* list = ListFactory::createList();
 
     cout << "--- Test dodawania elementow ---" << endl;
-    list->addBack(10);
-    list->addBack(20);
-    list->addFront(5);
-    list->addBack(30);
+    list->addBack(69);
+    list->addBack(67);
+    list->addFront(2137);
+    list->addBack(12);
 
     list->displayForward();
     list->displayBackward();
@@ -33,6 +33,28 @@ int main() {
     cout << "\n--- Test czyszczenia listy ---" << endl;
     list->clear();
     list->displayForward();
+
+    cout << "\n--- 3. Test iteratora (nastepny i poprzedni element) ---" << endl;
+    ListIterator* it = ListFactory::createIterator(list->getHead());
+    it->displayCurrent();
+    it->displayNext();
+    it->displayNext();
+    it->displayPrev();
+    delete it;
+
+    cout << "\n--- 4. Usuwanie spod wskazanego indeksu ---" << endl;
+    list->removeAt(2);
+    list->displayForward();
+
+    cout << "\n--- 5. Usuwanie z poczatku i konca ---" << endl;
+    list->removeFront();
+    list->removeBack();
+    list->displayForward();
+
+    cout << "\n--- 6. Czyszczenie calej listy ---" << endl;
+    list->clear();
+    list->displayForward();
+
 
     delete list;
 

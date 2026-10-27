@@ -95,3 +95,10 @@ void DoublyLinkedList::clear() {
         removeFront();
     }
 }
+
+Node* DoublyLinkedList::getHead() const {
+    return head;
+}
+
+Node* DoublyLinkedList::getTail() const {
+    return tail;

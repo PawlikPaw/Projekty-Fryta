@@ -2,9 +2,7 @@
 #define DOUBLYLINKEDLIST_H
 
 #include "Node.h"
-/*
- * Class representing a doubly linked list
- */
+
 class DoublyLinkedList {
 private:
     Node* head;
@@ -13,7 +11,7 @@ private:
 public:
     DoublyLinkedList();
     ~DoublyLinkedList();
-    
+
     void addFront(int val);
     void addBack(int val);
     void addAt(int index, int val);
@@ -23,9 +21,8 @@ public:
     void displayForward() const;
     void displayBackward() const;
     void clear();
-    // Constructor for the DoublyLinkedList class
-    Node* getHead() const;
-    Node* getTail() const;
+    
+    Node* getHead() const; 
 };
 
 #endif

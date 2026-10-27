@@ -34,6 +34,12 @@ int main() {
     list->clear();
     list->displayForward();
 
+    cout << "--- Test dodawania elementow ---" << endl;
+    list->addBack(69);
+    list->addBack(67);
+    list->addFront(2137);
+    list->addBack(12);
+
     cout << "\n--- 3. Test iteratora (nastepny i poprzedni element) ---" << endl;
     ListIterator* it = ListFactory::createIterator(list->getHead());
     it->displayCurrent();

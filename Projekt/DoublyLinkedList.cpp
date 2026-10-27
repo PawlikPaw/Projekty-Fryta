@@ -3,17 +3,13 @@
 #include <iostream>
 
 using namespace std;
-/*
- * Constructor for DoublyLinkedList
- */
+
 DoublyLinkedList::DoublyLinkedList() : head(nullptr), tail(nullptr) {}
 
 DoublyLinkedList::~DoublyLinkedList() {
     clear();
 }
-/*
- * Adds a new node with the given value to the front of the list
- */
+
 void DoublyLinkedList::addFront(int val) {
     Node* newNode = ListFactory::createNode(val);
     if (!head) {
@@ -24,9 +20,7 @@ void DoublyLinkedList::addFront(int val) {
         head = newNode;
     }
 }
-/*
- * Adds a new node with the given value to the back of the list
- */
+
 void DoublyLinkedList::addBack(int val) {
     Node* newNode = ListFactory::createNode(val);
     if (!tail) {
@@ -37,9 +31,27 @@ void DoublyLinkedList::addBack(int val) {
         tail = newNode;
     }
 }
-/*
- * Removes the first node from the list
- */
+
+void DoublyLinkedList::addAt(int index, int val) {
+    if (index <= 0) {
+        addFront(val);
+        return;
+    }
+    Node* curr = head;
+    for (int i = 0; i < index - 1 && curr; i++) {
+        curr = curr->next;
+    }
+    if (!curr || !curr->next) {
+        addBack(val);
+        return;
+    }
+    Node* newNode = ListFactory::createNode(val);
+    newNode->next = curr->next;
+    newNode->prev = curr;
+    curr->next->prev = newNode;
+    curr->next = newNode;
+}
+
 void DoublyLinkedList::removeFront() {
     if (!head) return;
     Node* temp = head;
@@ -51,9 +63,7 @@ void DoublyLinkedList::removeFront() {
     }
     delete temp;
 }
-/*
- * Removes the last node from the list
- */
+
 void DoublyLinkedList::removeBack() {
     if (!tail) return;
     Node* temp = tail;
@@ -65,9 +75,27 @@ void DoublyLinkedList::removeBack() {
     }
     delete temp;
 }
-/*
- * Displays the list from head to tail
- */
+
+void DoublyLinkedList::removeAt(int index) {
+    if (!head) return;
+    if (index <= 0) {
+        removeFront();
+        return;
+    }
+    Node* curr = head;
+    for (int i = 0; i < index && curr; i++) {
+        curr = curr->next;
+    }
+    if (!curr) return; 
+    if (!curr->next) {
+        removeBack();
+        return;
+    }
+    curr->prev->next = curr->next;
+    curr->next->prev = curr->prev;
+    delete curr;
+}
+
 void DoublyLinkedList::displayForward() const {
     Node* curr = head;
     cout << "Lista (od poczatku): ";
@@ -77,9 +105,7 @@ void DoublyLinkedList::displayForward() const {
     }
     cout << endl;
 }
-/*
- * Displays the list from tail to head
- */
+
 void DoublyLinkedList::displayBackward() const {
     Node* curr = tail;
     cout << "Lista (od konca):    ";
@@ -96,10 +122,7 @@ void DoublyLinkedList::clear() {
     }
 }
 
+// Ta funkcja jest potrzebna dla Iteratora!
 Node* DoublyLinkedList::getHead() const {
     return head;
-}
-
-Node* DoublyLinkedList::getTail() const {
-    return tail;
 }

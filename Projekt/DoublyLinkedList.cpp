@@ -102,3 +102,4 @@ Node* DoublyLinkedList::getHead() const {
 
 Node* DoublyLinkedList::getTail() const {
     return tail;
+}
